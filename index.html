@@ -61,6 +61,68 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-boolean" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/28/boolean/" class="article-date">
+  <time datetime="2017-10-28T00:35:33.705Z" itemprop="datePublished">2017-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="JavaScript-Boolean及Boolean对象"><a href="#JavaScript-Boolean及Boolean对象" class="headerlink" title="JavaScript Boolean及Boolean对象"></a>JavaScript Boolean及Boolean对象</h1><h2 id="程序中的boolean"><a href="#程序中的boolean" class="headerlink" title="程序中的boolean"></a>程序中的boolean</h2><p>boolean数据类型boolean变量存储为8位（1个字节）的数值形式，但只能是true或是false。boolean变量的值显示为true或false（在使用Print的时候），或者#TRUE或#FALSE#(在使用Write#的时候)。使用关键字true与false可将boolean变量赋值为这两个状态的一个。在java中boolean值只能是true和false，而不能用0和1代替，并且一定要小写。<br>boolean operate是指布尔运算。在ansys软件中他的下拉菜单会提示进行的布尔运算项目。在有的程序语言中该类型的关键字bool,如c++，用法相同</p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ol>
+<li>直接赋值boolean b1=false;</li>
+<li>由条件表达式赋值boolean b2=3&gt;4;</li>
+<li>由另一个boolean变量赋值boolean b3=b1;</li>
+<li>由方法返回赋值boolean b4=list.ready();//假设ready方法返回一个boolean的话，程序中boolean为布尔类型变量<h3 id="Boolean对象"><a href="#Boolean对象" class="headerlink" title="Boolean对象"></a>Boolean对象</h3>Boolean 对象表示两个值：”true”或”false”。<h3 id="Boolean对象的简介"><a href="#Boolean对象的简介" class="headerlink" title="Boolean对象的简介"></a>Boolean对象的简介</h3><pre><code>var b = new Boolean(false);
+</code></pre></li>
+</ol>
+<ul>
+<li>b 是 Boolean 对象实例，它的值是 false。但要注意的是，如果判断条件“b &amp;&amp; true”，结果却为“true”，原因是此处是用对象 b 作为条件的，而不是 b 的值，由于在条件表达式中任何对象都自转换为“true”，所以产生了不易理解的结果。</li>
+<li>在实际应用中，很少使用 Boolean 对象，通常使用的是 Boolean 原始值，这样可避免上面问题的发生。比如：<br>var b = false;</li>
+<li>本例的 b 是一个 Boolean 类型的变量，它是原始值，不是 Boolean 对象。</li>
+<li>不论是 Boolean 对象还是 Boolean 原始类型，都可以引用 Boolean 对象的属性和方法。<h3 id="Boolean对象的语法："><a href="#Boolean对象的语法：" class="headerlink" title="Boolean对象的语法："></a>Boolean对象的语法：</h3><pre><code>new Boolean(value);//构造函数
+Boolean(value);//转换函数
+</code></pre><h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3>参数value由布尔对象存放的值或者要转换成布尔值的值。<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3></li>
+</ul>
+<ol>
+<li>当作为一个构造函数（带有运算符new）调用时，Boolean()将把它的参数转换成一个布尔值，并且返回一个包含该值的Boolean对象</li>
+<li>如果作为一个函数（不带有运算符new）调用时，Boolean()只将把它的参数转换成一个原始的布尔值，并且返回这个值。<br>注释：如果省略value参数，或者设置为0、-0、null、””、false、undefined或NaN,则改对象设置为false。否则设置为true（即使value参数是字符串“false”）。<br>下面所有的代码行均会创建初始值为false的Boolean对象：</li>
+</ol>
+<ul>
+<li>var myBoolean = new Boolean();</li>
+<li>var myBoolean = new Boolean(0);</li>
+<li>var myBoolean = new Boolean(null);</li>
+<li>var myBoolean = new Boolean(“”);</li>
+<li>var myBoolean = new Boolean(NaN);<br>下面的所有代码行均会创初始值为true的Boolean对象：</li>
+<li>var myBoolean = new Boolean(1);</li>
+<li>var myBoolean = new Boolean(true);</li>
+<li>var myBoolean = new Boolean(“true”);</li>
+<li>var myBoolean = new Boolean(“false”);</li>
+<li>var myBoolean = new Boolean(“Bill Gates”);<h3 id="Boolean对象属性"><a href="#Boolean对象属性" class="headerlink" title="Boolean对象属性"></a>Boolean对象属性</h3>|属性|描述|<br>|—–|—–|<br>|constructor|返回对创建此对象的Boolean函数的引用|<br>|prototype|使您有能力向对象添加属性和方法|<h3 id="Boolean对象方法"><a href="#Boolean对象方法" class="headerlink" title="Boolean对象方法"></a>Boolean对象方法</h3>|方法|描述|<br>|—–|—–|<br>|toSource()|返回该对象的源代码|<br>|toString()|把逻辑值转换为字符串，并返回结果|<br>|valueOf()|返回Boolean对象的原始值|<h3 id="Boolean对象描述"><a href="#Boolean对象描述" class="headerlink" title="Boolean对象描述"></a>Boolean对象描述</h3></li>
+</ul>
+<ol>
+<li>在JavaScript中，布尔值是一种基本的数据类型。<br>Boolean对象是一个将布尔值打包的布尔对象。<br>Boolean对象主要用于提供将布尔值转换成字符串的toString()方法。</li>
+<li>当调用toString()方法将布尔值转换成字符串时（通常是由<br>JavaScript引式地调用），JavaScript会内在地将这个布尔值转换<br>成一个临时的Boolean对象，然后调用这个对象toString()方法。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/28/boolean/" data-id="cj9alihc00001rktfqfbze1pa" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/10/14/hello-world/" class="article-date">
@@ -96,7 +158,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/14/hello-world/" data-id="cj9alawlo00001stfp4voe74a" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/10/14/hello-world/" data-id="cj9alihbk0000rktfzaaesmtg" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -134,6 +196,10 @@
     <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/10/28/boolean/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2017/10/14/hello-world/">Hello World</a>

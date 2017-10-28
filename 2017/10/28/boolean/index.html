@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/10/28/boolean/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="JavaScript Boolean及Boolean对象程序中的booleanboolean数据类型boolean变量存储为8位（1个字节）的数值形式，但只能是true或是false。boolean变量的值显示为true或false（在使用Print的时候），或者#TRUE或#FALSE#(在使用Write#的时候)。使用关键字true与false可将boolean变量赋值为这两个状态的一个。在j">
-<meta property="og:updated_time" content="2017-10-28T00:16:01.597Z">
+<meta property="og:updated_time" content="2017-10-28T00:34:12.724Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
 <meta name="twitter:description" content="JavaScript Boolean及Boolean对象程序中的booleanboolean数据类型boolean变量存储为8位（1个字节）的数值形式，但只能是true或是false。boolean变量的值显示为true或false（在使用Print的时候），或者#TRUE或#FALSE#(在使用Write#的时候)。使用关键字true与false可将boolean变量赋值为这两个状态的一个。在j">
@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -66,7 +66,7 @@
         <section id="main"><article id="post-boolean" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/10/28/boolean/" class="article-date">
-  <time datetime="2017-10-28T00:19:06.848Z" itemprop="datePublished">2017-10-28</time>
+  <time datetime="2017-10-28T00:35:33.705Z" itemprop="datePublished">2017-10-28</time>
 </a>
     
   </div>
@@ -80,13 +80,16 @@
 <li>直接赋值boolean b1=false;</li>
 <li>由条件表达式赋值boolean b2=3&gt;4;</li>
 <li>由另一个boolean变量赋值boolean b3=b1;</li>
-<li>由方法返回赋值boolean b4=list.ready();//假设ready方法返回一个boolean的话，程序中boolean为布尔类型变量<h3 id="Boolean对象"><a href="#Boolean对象" class="headerlink" title="Boolean对象"></a>Boolean对象</h3>Boolean 对象表示两个值：”true”或”false”。<h3 id="Boolean对象的简介"><a href="#Boolean对象的简介" class="headerlink" title="Boolean对象的简介"></a>Boolean对象的简介</h3>var b = new Boolean(false);</li>
+<li>由方法返回赋值boolean b4=list.ready();//假设ready方法返回一个boolean的话，程序中boolean为布尔类型变量<h3 id="Boolean对象"><a href="#Boolean对象" class="headerlink" title="Boolean对象"></a>Boolean对象</h3>Boolean 对象表示两个值：”true”或”false”。<h3 id="Boolean对象的简介"><a href="#Boolean对象的简介" class="headerlink" title="Boolean对象的简介"></a>Boolean对象的简介</h3><pre><code>var b = new Boolean(false);
+</code></pre></li>
 </ol>
 <ul>
 <li>b 是 Boolean 对象实例，它的值是 false。但要注意的是，如果判断条件“b &amp;&amp; true”，结果却为“true”，原因是此处是用对象 b 作为条件的，而不是 b 的值，由于在条件表达式中任何对象都自转换为“true”，所以产生了不易理解的结果。</li>
 <li>在实际应用中，很少使用 Boolean 对象，通常使用的是 Boolean 原始值，这样可避免上面问题的发生。比如：<br>var b = false;</li>
 <li>本例的 b 是一个 Boolean 类型的变量，它是原始值，不是 Boolean 对象。</li>
-<li>不论是 Boolean 对象还是 Boolean 原始类型，都可以引用 Boolean 对象的属性和方法。<h3 id="Boolean对象的语法："><a href="#Boolean对象的语法：" class="headerlink" title="Boolean对象的语法："></a>Boolean对象的语法：</h3>new Boolean(value);//构造函数<br>Boolean(value);//转换函数<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3>参数value由布尔对象存放的值或者要转换成布尔值的值。<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3></li>
+<li>不论是 Boolean 对象还是 Boolean 原始类型，都可以引用 Boolean 对象的属性和方法。<h3 id="Boolean对象的语法："><a href="#Boolean对象的语法：" class="headerlink" title="Boolean对象的语法："></a>Boolean对象的语法：</h3><pre><code>new Boolean(value);//构造函数
+Boolean(value);//转换函数
+</code></pre><h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3>参数value由布尔对象存放的值或者要转换成布尔值的值。<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3></li>
 </ul>
 <ol>
 <li>当作为一个构造函数（带有运算符new）调用时，Boolean()将把它的参数转换成一个布尔值，并且返回一个包含该值的Boolean对象</li>
@@ -112,7 +115,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/28/boolean/" data-id="cj9akyzr00000u4tfx685zq62" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/28/boolean/" data-id="cj9alihc00001rktfqfbze1pa" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -123,7 +126,7 @@
   
   
     <a href="/2017/10/14/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">Hello World</div>
     </a>
   
@@ -156,7 +159,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -181,7 +184,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
