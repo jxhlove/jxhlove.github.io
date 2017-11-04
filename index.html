@@ -64,7 +64,7 @@
     <article id="post-window对象" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/11/04/window对象/" class="article-date">
-  <time datetime="2017-11-04T01:14:07.729Z" itemprop="datePublished">2017-11-04</time>
+  <time datetime="2017-11-04T01:18:30.866Z" itemprop="datePublished">2017-11-04</time>
 </a>
     
   </div>
@@ -73,7 +73,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Window对象"><a href="#Window对象" class="headerlink" title="Window对象"></a>Window对象</h1><h2 id="Window对象-1"><a href="#Window对象-1" class="headerlink" title="Window对象"></a>Window对象</h2><h3 id="Window对象表示浏览器中打开的窗口。"><a href="#Window对象表示浏览器中打开的窗口。" class="headerlink" title="Window对象表示浏览器中打开的窗口。"></a>Window对象表示浏览器中打开的窗口。</h3><p>如果文档包含框架(frame或iframe标签)，浏览器会HTML文档创建一个window对象，并为每个框架创建一个额外的window对象<br>注释：没有应用于window对象的公开标准，不过所有浏览器都支持该对象</p>
+        <h1 id="Window对象"><a href="#Window对象" class="headerlink" title="Window对象"></a>Window对象</h1><h2 id="Window对象表示浏览器中打开的窗口。"><a href="#Window对象表示浏览器中打开的窗口。" class="headerlink" title="Window对象表示浏览器中打开的窗口。"></a>Window对象表示浏览器中打开的窗口。</h2><p>如果文档包含框架(frame或iframe标签)，浏览器会HTML文档创建一个window对象，并为每个框架创建一个额外的window对象<br>注释：没有应用于window对象的公开标准，不过所有浏览器都支持该对象</p>
 <h2 id="Window对象集合"><a href="#Window对象集合" class="headerlink" title="Window对象集合"></a>Window对象集合</h2><table>
 <thead>
 <tr>
@@ -279,15 +279,15 @@
 <li>Window 对象的 window 属性和 self 属性引用的都是它自己。当你想明确地引用当前窗口，而不仅仅是隐式地引用它时，<br>可以使用这两个属性。除了这两个属性之外，parent 属性、top 属性以及 frame[] 数组都引用了与当前 Window 对象相关<br>的其他 Window 对象</li>
 </ul>
 <ol>
-<li>要引用窗口中的一个框架，可以使用如下语法：<br>frame[i]//当前窗口的框架<br>self.frame[i]//当前窗口的框架<br>w.frame[i]//当前w的框架</li>
-<li>要引用一个框架的父窗口（或父框架），可以使用下面的语法：<br>parent//当前窗口的父窗口<br>self.parent//当前窗口的父窗口<br>w.parent//窗口w的父窗口</li>
+<li>要引用窗口中的一个框架，可以使用如下语法：<br> frame[i]//当前窗口的框架<br> self.frame[i]//当前窗口的框架<br> w.frame[i]//当前w的框架</li>
+<li>要引用一个框架的父窗口（或父框架），可以使用下面的语法：<br> parent//当前窗口的父窗口<br> self.parent//当前窗口的父窗口<br> w.parent//窗口w的父窗口</li>
 <li>要从顶层窗口含有的任何一个框架中引用它，可以使用下面语法：<br> top//当前框架的顶层窗口<br> self.top//当前框架的顶层窗口<br> f.top//框架f的顶层窗口<h3 id="新的顶层浏览器窗口由方法widnow-open-创建。当调用该方法时，应把-open-调用的返回值存储在一个变量中，然后使用那个变量来引用新窗口。新窗口的-opener-属性反过来引用了打开它的那个窗口。"><a href="#新的顶层浏览器窗口由方法widnow-open-创建。当调用该方法时，应把-open-调用的返回值存储在一个变量中，然后使用那个变量来引用新窗口。新窗口的-opener-属性反过来引用了打开它的那个窗口。" class="headerlink" title="新的顶层浏览器窗口由方法widnow.open()创建。当调用该方法时，应把 open() 调用的返回值存储在一个变量中，然后使用那个变量来引用新窗口。新窗口的 opener 属性反过来引用了打开它的那个窗口。"></a>新的顶层浏览器窗口由方法widnow.open()创建。当调用该方法时，应把 open() 调用的返回值存储在一个变量中，然后使用那个变量来引用新窗口。新窗口的 opener 属性反过来引用了打开它的那个窗口。</h3><h3 id="一般来说，Window-对象的方法都是对浏览器窗口或框架进行某种操作。而-alert-方法、confirm-方法和-prompt-方法则不同，它们通过简单的对话框与用户进行交互"><a href="#一般来说，Window-对象的方法都是对浏览器窗口或框架进行某种操作。而-alert-方法、confirm-方法和-prompt-方法则不同，它们通过简单的对话框与用户进行交互" class="headerlink" title="一般来说，Window 对象的方法都是对浏览器窗口或框架进行某种操作。而 alert() 方法、confirm() 方法和 prompt 方法则不同，它们通过简单的对话框与用户进行交互"></a>一般来说，Window 对象的方法都是对浏览器窗口或框架进行某种操作。而 alert() 方法、confirm() 方法和 prompt 方法则不同，它们通过简单的对话框与用户进行交互</h3></li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/04/window对象/" data-id="cj9kmzs4o00014stf81f5ashz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/04/window对象/" data-id="cj9kn5ejv0001ywtfiic33fmh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -378,7 +378,7 @@ Boolean(value);//转换函数
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/28/boolean/" data-id="cj9kmzs4o00004stfolbmau8a" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/28/boolean/" data-id="cj9kn5ejv0002ywtffo7dj1aj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -423,7 +423,7 @@ Boolean(value);//转换函数
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/14/hello-world/" data-id="cj9kmzs4y00024stfx9p6deyw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/14/hello-world/" data-id="cj9kn5ejl0000ywtflzdm26bw" class="article-share-link">Share</a>
       
       
     </footer>
