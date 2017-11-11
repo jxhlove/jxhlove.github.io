@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/11/javascript变量/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="JavaScript变量变量时存储信息的容器实例：var x=2; var y=3; var z=x+y; 就像代数那样x=2 y=3 z=x+y  在代数中，我们使用字母（比如x)来保存值（比如2）。 通过上面的表达式z=x+y，我们能够计算出z的值为5. 在javascript中，这些字母被称为变量。 JavaScript变量 与代数一样，JavaScript 变量可用于存放值（比如 x=2）">
-<meta property="og:updated_time" content="2017-11-11T00:35:50.171Z">
+<meta property="og:updated_time" content="2017-11-11T00:51:59.753Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
 <meta name="twitter:description" content="JavaScript变量变量时存储信息的容器实例：var x=2; var y=3; var z=x+y; 就像代数那样x=2 y=3 z=x+y  在代数中，我们使用字母（比如x)来保存值（比如2）。 通过上面的表达式z=x+y，我们能够计算出z的值为5. 在javascript中，这些字母被称为变量。 JavaScript变量 与代数一样，JavaScript 变量可用于存放值（比如 x=2）">
@@ -66,7 +66,7 @@
         <section id="main"><article id="post-javascript变量" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/11/11/javascript变量/" class="article-date">
-  <time datetime="2017-11-11T00:43:06.996Z" itemprop="datePublished">2017-11-11</time>
+  <time datetime="2017-11-11T01:14:00.773Z" itemprop="datePublished">2017-11-11</time>
 </a>
     
   </div>
@@ -89,10 +89,7 @@ z=x+y
 <li>变量名称对大小写敏感（y 和 Y 是不同的变量）<br>提示：JavaScript 语句和 JavaScript 变量都对大小写敏感。<h2 id="JavaScript-数据类型"><a href="#JavaScript-数据类型" class="headerlink" title="JavaScript 数据类型"></a>JavaScript 数据类型</h2>JavaScript 变量还能保存其他数据类型，比如文本值 (name=”Bill Gates”)。<br>在 JavaScript 中，类似 “Bill Gates” 这样一条文本被称为字符串。<br>JavaScript 变量有很多种类型，但是现在，我们只关注数字和字符串。<br>当您向变量分配文本值时，应该用双引号或单引号包围这个值。<br>当您向变量赋的值是数值时，不要使用引号。如果您用引号包围数值，该值会被作为文本来处理。<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3> var pi=3.14;<br> var name=”Bill Gates”;<br> var answer=’Yes I am!’;<h2 id="声明（创建）-JavaScript-变量"><a href="#声明（创建）-JavaScript-变量" class="headerlink" title="声明（创建） JavaScript 变量"></a>声明（创建） JavaScript 变量</h2><ol>
 <li>在 JavaScript 中创建变量通常称为“声明”变量。<br>我们使用 var 关键词来声明变量：<br>var carname;</li>
 <li>变量声明之后，该变量是空的（它没有值）。<br>如需向变量赋值，请使用等号：<br>carname=”Volvo”;</li>
-<li>不过，您也可以在声明变量时对其赋值：<br>var carname=”Volvo”;<h3 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h3>在下面的例子中，我们创建了名为 carname 的变量，并向其赋值 “Volvo”，然后把它放入 id=”demo” 的 HTML 段落中：<br><p id="demo"></p><br>var carname=”Volvo”;<br>document.getElementById(“demo”).innerHTML=carname;<h2 id="一条语句，多个变量"><a href="#一条语句，多个变量" class="headerlink" title="一条语句，多个变量"></a>一条语句，多个变量</h2>您可以在一条语句中声明很多变量。该语句以 var 开头，并使用逗号分隔变量即可：<br>var name=”Gates”, age=56, job=”CEO”;<br>声明也可横跨多行：<br>var name=”Gates”,<br>age=56,<br>job=”CEO”;<h2 id="Value-undefined"><a href="#Value-undefined" class="headerlink" title="Value = undefined"></a>Value = undefined</h2>在计算机程序中，经常会声明无值的变量。未使用值来声明的变量，其值实际上是 undefined。<br>在执行过以下语句后，变量 carname 的值将是 undefined：<br>var carname;<h2 id="重新声明-JavaScript-变量"><a href="#重新声明-JavaScript-变量" class="headerlink" title="重新声明 JavaScript 变量"></a>重新声明 JavaScript 变量</h2>如果重新声明 JavaScript 变量，该变量的值不会丢失：<br>在以下两条语句执行后，变量 carname 的值依然是 “Volvo”：<br>var carname=”Volvo”;<br>var carname;<h2 id="JavaScript-算数"><a href="#JavaScript-算数" class="headerlink" title="JavaScript 算数"></a>JavaScript 算数</h2>您可以通过 JavaScript 变量来做算数，使用的是 = 和 + 这类运算符：<h3 id="例子-2"><a href="#例子-2" class="headerlink" title="例子"></a>例子</h3>y=5;<br>x=y+2;<h2 id="向-JavaScript-变量赋值编辑"><a href="#向-JavaScript-变量赋值编辑" class="headerlink" title="向 JavaScript 变量赋值编辑"></a>向 JavaScript 变量赋值编辑</h2>通过赋值语句向 JavaScript 变量赋值：<br>x = 5; carname = “Volvo”;<br>x = 5; carname = “Volvo”;<br>变量名在 = 符号的左边，而需要向变量赋的值在 = 的右侧。<br>在以上语句执行后，变量 x 中保存的值是 5，而 carname 的值是 Volvo。<h2 id="向未声明的-JavaScript-变量赋值编辑"><a href="#向未声明的-JavaScript-变量赋值编辑" class="headerlink" title="向未声明的 JavaScript 变量赋值编辑"></a>向未声明的 JavaScript 变量赋值编辑</h2>如果您所赋值的变量还未进行过声明，该变量会自动声明。<br>这些语句：<br>x = 5; carname = “Volvo”;<br>x = 5; carname = “Volvo”;<br>与这些语句的效果相同：<br>var x = 5; var carname = “Volvo”;<br>var x = 5; var carname = “Volvo”;<h2 id="JavaScript-变量名称的规则编辑"><a href="#JavaScript-变量名称的规则编辑" class="headerlink" title="JavaScript 变量名称的规则编辑"></a>JavaScript 变量名称的规则编辑</h2></li>
-<li>变量对大小写敏感（y 和 Y 是两个不同的变量）</li>
-<li>变量必须以字母或下划线开始</li>
-<li>注释：由于 JavaScript 对大小写敏感，变量名也对大小写敏感。</li>
+<li>不过，您也可以在声明变量时对其赋值：<br>var carname=”Volvo”;<h3 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h3>在下面的例子中，我们创建了名为 carname 的变量，并向其赋值 “Volvo”，然后把它放入 id=”demo” 的 HTML 段落中：<br><p id="demo"></p><br>var carname=”Volvo”;<br>document.getElementById(“demo”).innerHTML=carname;<h2 id="一条语句，多个变量"><a href="#一条语句，多个变量" class="headerlink" title="一条语句，多个变量"></a>一条语句，多个变量</h2>您可以在一条语句中声明很多变量。该语句以 var 开头，并使用逗号分隔变量即可：<br>var name=”Gates”, age=56, job=”CEO”;<br>声明也可横跨多行：<br>var name=”Gates”,<br>age=56,<br>job=”CEO”;<h2 id="Value-undefined"><a href="#Value-undefined" class="headerlink" title="Value = undefined"></a>Value = undefined</h2>在计算机程序中，经常会声明无值的变量。未使用值来声明的变量，其值实际上是 undefined。<br>在执行过以下语句后，变量 carname 的值将是 undefined：<br>var carname;<h2 id="重新声明-JavaScript-变量"><a href="#重新声明-JavaScript-变量" class="headerlink" title="重新声明 JavaScript 变量"></a>重新声明 JavaScript 变量</h2>如果重新声明 JavaScript 变量，该变量的值不会丢失：<br>在以下两条语句执行后，变量 carname 的值依然是 “Volvo”：<br>var carname=”Volvo”;<br>var carname;<h2 id="JavaScript-算数"><a href="#JavaScript-算数" class="headerlink" title="JavaScript 算数"></a>JavaScript 算数</h2>您可以通过 JavaScript 变量来做算数，使用的是 = 和 + 这类运算符：<h3 id="例子-2"><a href="#例子-2" class="headerlink" title="例子"></a>例子</h3>y=5;<br>x=y+2;<h2 id="向-JavaScript-变量赋值编辑"><a href="#向-JavaScript-变量赋值编辑" class="headerlink" title="向 JavaScript 变量赋值编辑"></a>向 JavaScript 变量赋值编辑</h2>通过赋值语句向 JavaScript 变量赋值：<br>x = 5; carname = “Volvo”;<br>x = 5; carname = “Volvo”;<br>变量名在 = 符号的左边，而需要向变量赋的值在 = 的右侧。<br>在以上语句执行后，变量 x 中保存的值是 5，而 carname 的值是 Volvo。<h2 id="向未声明的-JavaScript-变量赋值编辑"><a href="#向未声明的-JavaScript-变量赋值编辑" class="headerlink" title="向未声明的 JavaScript 变量赋值编辑"></a>向未声明的 JavaScript 变量赋值编辑</h2>如果您所赋值的变量还未进行过声明，该变量会自动声明。<br>这些语句：<br>x = 5; carname = “Volvo”;<br>x = 5; carname = “Volvo”;<br>与这些语句的效果相同：<br>var x = 5; var carname = “Volvo”;<br>var x = 5; var carname = “Volvo”;</li>
 </ol>
 </li>
 </ul>
@@ -100,7 +97,7 @@ z=x+y
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/11/javascript变量/" data-id="cj9ulydsu00023gtf21is3jwg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/11/javascript变量/" data-id="cj9un290s0002q4tfnqpevoq4" class="article-share-link">Share</a>
       
       
     </footer>
