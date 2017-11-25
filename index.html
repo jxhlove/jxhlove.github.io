@@ -61,10 +61,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-jQuery事件" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-jQuery - AJAX get() 和 post() 方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/11/25/jQuery事件/" class="article-date">
-  <time datetime="2017-11-25T01:27:10.801Z" itemprop="datePublished">2017-11-25</time>
+    <a href="/2017/11/25/jQuery - AJAX get() 和 post() 方法/" class="article-date">
+  <time datetime="2017-11-25T02:03:30.739Z" itemprop="datePublished">2017-11-25</time>
 </a>
     
   </div>
@@ -73,29 +73,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="jQuery事件"><a href="#jQuery事件" class="headerlink" title="jQuery事件"></a>jQuery事件</h1><h2 id="jQuery事件函数"><a href="#jQuery事件函数" class="headerlink" title="jQuery事件函数"></a>jQuery事件函数</h2><ul>
-<li>jQuery事件处理方法时jQuery中的核心函数。</li>
-<li>事件处理程序指的是当HTML中发生某些事件时所调用的方法。术语由事件“触发”（或“激发”）经常会被使用。</li>
-<li>通常会把 jQuery 代码放到 <head>部分的事件处理方法中：<h3 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h3><html><br><head><br><script type="text/javascript" src="jquery.js"></script><br><script type="text/javascript"><br>$(document).ready(function(){<br>  $(“button”).click(function(){<pre><code>$(&quot;p&quot;).hide();
-</code></pre>  });<br>});<br></script><br></head><br></html><br>在上面的例子中，当按钮的点击事件被触发时会调用一个函数：<br> $(“button”).click(function(){..some code…})<br>该方法隐藏所有<p>元素：<br> $(“p”).hide();</p><h2 id="单独文件中的函数"><a href="#单独文件中的函数" class="headerlink" title="单独文件中的函数"></a>单独文件中的函数</h2>如果您的网站包含许多页面，并且您希望您的jQuery函数易于维护，那么请把您的 jQuery 函数放到独立的 .js 文件中。</head></li>
-</ul>
-<p>当我们在教程中演示 jQuery 时，会将函数直接添加到 <head> 部分中。<br>不过，把它们放到一个单独的文件中会更好，就像这样（通过 src 属性来引用文件）：</head></p>
-<h3 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h3><p><head></head></p>
-<p><script type="text/javascript" src="jquery.js"></script> </p>
-<p><script type="text/javascript" src="my_jquery_function.js"></script><br></p>
-<h2 id="jQuery名称冲突"><a href="#jQuery名称冲突" class="headerlink" title="jQuery名称冲突"></a>jQuery名称冲突</h2><p>jQuery使用$符号作为jQuery的简介方式。<br>某些其他JavaScript库中的函数(比如Prototype)同样使用$符号。<br>jQuery使用名为 noConflict()的方法来解决该问题。<br>var jq=jQuery.noConflict(),帮助您使用自己的名称(比如jq)来代替$符号。</p>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>由于jQuery是为处理HTML事件而特别设计的，那么当您遵循以下原则时，您的代码会更恰当且更易维护：</p>
+        <h1 id="jQuery-AJAX-get-和-post-方法"><a href="#jQuery-AJAX-get-和-post-方法" class="headerlink" title="jQuery - AJAX get() 和 post() 方法"></a>jQuery - AJAX get() 和 post() 方法</h1><h2 id="jQuery-get-和-post-方法用于通过-HTTP-GET-或-POST-请求从服务器请求数据。"><a href="#jQuery-get-和-post-方法用于通过-HTTP-GET-或-POST-请求从服务器请求数据。" class="headerlink" title="jQuery get() 和 post() 方法用于通过 HTTP GET 或 POST 请求从服务器请求数据。"></a>jQuery get() 和 post() 方法用于通过 HTTP GET 或 POST 请求从服务器请求数据。</h2><h2 id="HTTP-请求：GET-vs-POST"><a href="#HTTP-请求：GET-vs-POST" class="headerlink" title="HTTP 请求：GET vs. POST"></a>HTTP 请求：GET vs. POST</h2><p>两种在客户端和服务器端进行请求-响应的常用方法是：GET 和 POST。</p>
 <ul>
-<li>把所有jQuery代码置于事件处理函数中</li>
-<li>把所有事件处理函数置于文档就绪事件处理器中</li>
-<li>把jQuery代码置于单独的.js文件中</li>
-<li>如果存在名称冲突，则重命名jQuery库<h2 id="jQuery事件-1"><a href="#jQuery事件-1" class="headerlink" title="jQuery事件"></a>jQuery事件</h2>下面是jQuery中事件方法的一些例子：<br>  |Event函数|绑定函数至|<br>  |—-|—-|<br>  |$(document).ready(function)|将函数绑定到文档的就绪事件（当文档完成加载时）|<br>  |$(selector).click(function)|触发或将函数绑定到被选元素的点击事件|<br>  |$(selector).dblclick(function)|触发或将函数绑定到被选元素的双击事件|<br>  |$(selector).focus(function)|触发或将函数绑定到被选元素的获得焦点事件|<br>  |$(selector).mouseover(function)|触发或将函数绑定到被选元素的鼠标悬停事件|<h2 id="jQuery事件方法"><a href="#jQuery事件方法" class="headerlink" title="jQuery事件方法"></a>jQuery事件方法</h2>事件方法会触发匹配元素的事件，或将函数绑定到所有匹配元素的某个事件。<br>触发实例：<br>$(“button#demo”).click()<br>上面的例子将触发id=”demo”的button元素的click事件。<br>绑定实例：<br>$(“button#demo”).click(function(){$(“img”).hide()})</li>
+<li>GET - 从指定的资源请求数据</li>
+<li>POST - 向指定的资源提交要处理的数据<br>GET 基本上用于从服务器获得（取回）数据。注释：GET 方法可能返回缓存数据。</li>
 </ul>
-
+<p>POST 也可用于从服务器获取数据。不过，POST 方法不会缓存数据，并且常用于连同请求一起发送数据。</p>
+<p>如需学习更多有关 GET 和 POST 以及两方法差异的知识，请阅读我们的 HTTP 方法 - GET 对比 POST。</p>
+<h2 id="jQuery-get-方法"><a href="#jQuery-get-方法" class="headerlink" title="jQuery $.get() 方法"></a>jQuery $.get() 方法</h2><p>$.get() 方法通过 HTTP GET 请求从服务器上请求数据。</p>
+<h3 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h3><pre><code>$.get(URL,callback);
+</code></pre><p>必需的 URL 参数规定您希望请求的 URL。</p>
+<p>可选的 callback 参数是请求成功后所执行的函数名。</p>
+<p>下面的例子使用 $.get() 方法从服务器上的一个文件中取回数据：</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>$(“button”).click(function(){<br>  $.get(“demo_test.asp”,function(data,status){<br>    alert(“Data: “ + data + “\nStatus: “ + status);<br>  });<br>});</p>
+<p>$.get() 的第一个参数是我们希望请求的 URL（”demo_test.asp”）。</p>
+<p>第二个参数是回调函数。第一个回调参数存有被请求页面的内容，第二个回调参数存有请求的状态。</p>
+<p>提示：这个 ASP 文件 (“demo_test.asp”) 类似这样：</p>
+<pre><code>&lt;%
+response.write(&quot;This is some text from an external ASP file.&quot;)
+%&gt;
+</code></pre><h2 id="jQuery-post-方法"><a href="#jQuery-post-方法" class="headerlink" title="jQuery $.post() 方法"></a>jQuery $.post() 方法</h2><p>$.post() 方法通过 HTTP POST 请求从服务器上请求数据。</p>
+<h3 id="语法：-1"><a href="#语法：-1" class="headerlink" title="语法："></a>语法：</h3><pre><code>$.post(URL,data,callback);
+</code></pre><p>必需的 URL 参数规定您希望请求的 URL。</p>
+<p>可选的 data 参数规定连同请求发送的数据。</p>
+<p>可选的 callback 参数是请求成功后所执行的函数名。</p>
+<p>下面的例子使用 $.post() 连同请求一起发送数据：</p>
+<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><p>$(“button”).click(function(){<br>  $.post(“demo_test_post.asp”,<br>  {<br>    name:”Donald Duck”,<br>    city:”Duckburg”<br>  },<br>  function(data,status){<br>    alert(“Data: “ + data + “\nStatus: “ + status);<br>  });<br>});<br>$.post() 的第一个参数是我们希望请求的 URL (“demo_test_post.asp”)。</p>
+<p>然后我们连同请求（name 和 city）一起发送数据。</p>
+<p>“demo_test_post.asp” 中的 ASP 脚本读取这些参数，对它们进行处理，然后返回结果。</p>
+<p>第三个参数是回调函数。第一个回调参数存有被请求页面的内容，而第二个参数存有请求的状态。</p>
+<p>提示：这个 ASP 文件 (“demo_test_post.asp”) 类似这样：</p>
+<pre><code>&lt;%
+dim fname,city
+fname=Request.Form(&quot;name&quot;)
+city=Request.Form(&quot;city&quot;)
+Response.Write(&quot;Dear &quot; &amp; fname &amp; &quot;. &quot;)
+Response.Write(&quot;Hope you live well in &quot; &amp; city &amp; &quot;.&quot;)
+%&gt;
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/25/jQuery事件/" data-id="cjaent6qz0001z4tfo6d4dxdp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/25/jQuery - AJAX get() 和 post() 方法/" data-id="cjaep0mwq0001pgtf66d233nr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -139,7 +158,7 @@ z=x+y
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/11/javascript变量/" data-id="cjaent6r50003z4tfm87xad0h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/11/javascript变量/" data-id="cjaep0mwy0003pgtfs3vu8zmg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -375,7 +394,7 @@ z=x+y
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/04/window对象/" data-id="cjaent6r70004z4tf77kkvqym" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/04/window对象/" data-id="cjaep0mx00004pgtfwzimy00b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -466,7 +485,7 @@ Boolean(value);//转换函数
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/28/boolean/" data-id="cjaent6qq0000z4tfqualw5zq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/28/boolean/" data-id="cjaep0mwg0000pgtf2nhj7aan" class="article-share-link">Share</a>
       
       
     </footer>
@@ -511,7 +530,7 @@ Boolean(value);//转换函数
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/14/hello-world/" data-id="cjaent6r30002z4tfm5x6u3pu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/14/hello-world/" data-id="cjaep0mwv0002pgtf18elf6cb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -551,7 +570,7 @@ Boolean(value);//转换函数
       <ul>
         
           <li>
-            <a href="/2017/11/25/jQuery事件/">(no title)</a>
+            <a href="/2017/11/25/jQuery - AJAX get() 和 post() 方法/">(no title)</a>
           </li>
         
           <li>

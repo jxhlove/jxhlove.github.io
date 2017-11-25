@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="jQuery - AJAX get() 和 post() 方法jQuery get() 和 post() 方法用于通过 HTTP GET 或 POST 请求从服务器请求数据。HTTP 请求：GET vs. POST两种在客户端和服务器端进行请求-响应的常用方法是：GET 和 POST。  GET - 从指定的资源请求数据 POST - 向指定的资源提交要处理的数据GET 基本上用于从服务器获得（取">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/11/25/jQuery - AJAX get() 和 post() 方法/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="jQuery - AJAX get() 和 post() 方法jQuery get() 和 post() 方法用于通过 HTTP GET 或 POST 请求从服务器请求数据。HTTP 请求：GET vs. POST两种在客户端和服务器端进行请求-响应的常用方法是：GET 和 POST。  GET - 从指定的资源请求数据 POST - 向指定的资源提交要处理的数据GET 基本上用于从服务器获得（取">
+<meta property="og:updated_time" content="2017-11-25T01:40:15.774Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="jQuery - AJAX get() 和 post() 方法jQuery get() 和 post() 方法用于通过 HTTP GET 或 POST 请求从服务器请求数据。HTTP 请求：GET vs. POST两种在客户端和服务器端进行请求-响应的常用方法是：GET 和 POST。  GET - 从指定的资源请求数据 POST - 向指定的资源提交要处理的数据GET 基本上用于从服务器获得（取">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-jQuery - AJAX get() 和 post() 方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/25/jQuery - AJAX get() 和 post() 方法/" class="article-date">
+  <time datetime="2017-11-25T02:03:30.739Z" itemprop="datePublished">2017-11-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="jQuery-AJAX-get-和-post-方法"><a href="#jQuery-AJAX-get-和-post-方法" class="headerlink" title="jQuery - AJAX get() 和 post() 方法"></a>jQuery - AJAX get() 和 post() 方法</h1><h2 id="jQuery-get-和-post-方法用于通过-HTTP-GET-或-POST-请求从服务器请求数据。"><a href="#jQuery-get-和-post-方法用于通过-HTTP-GET-或-POST-请求从服务器请求数据。" class="headerlink" title="jQuery get() 和 post() 方法用于通过 HTTP GET 或 POST 请求从服务器请求数据。"></a>jQuery get() 和 post() 方法用于通过 HTTP GET 或 POST 请求从服务器请求数据。</h2><h2 id="HTTP-请求：GET-vs-POST"><a href="#HTTP-请求：GET-vs-POST" class="headerlink" title="HTTP 请求：GET vs. POST"></a>HTTP 请求：GET vs. POST</h2><p>两种在客户端和服务器端进行请求-响应的常用方法是：GET 和 POST。</p>
+<ul>
+<li>GET - 从指定的资源请求数据</li>
+<li>POST - 向指定的资源提交要处理的数据<br>GET 基本上用于从服务器获得（取回）数据。注释：GET 方法可能返回缓存数据。</li>
+</ul>
+<p>POST 也可用于从服务器获取数据。不过，POST 方法不会缓存数据，并且常用于连同请求一起发送数据。</p>
+<p>如需学习更多有关 GET 和 POST 以及两方法差异的知识，请阅读我们的 HTTP 方法 - GET 对比 POST。</p>
+<h2 id="jQuery-get-方法"><a href="#jQuery-get-方法" class="headerlink" title="jQuery $.get() 方法"></a>jQuery $.get() 方法</h2><p>$.get() 方法通过 HTTP GET 请求从服务器上请求数据。</p>
+<h3 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h3><pre><code>$.get(URL,callback);
+</code></pre><p>必需的 URL 参数规定您希望请求的 URL。</p>
+<p>可选的 callback 参数是请求成功后所执行的函数名。</p>
+<p>下面的例子使用 $.get() 方法从服务器上的一个文件中取回数据：</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>$(“button”).click(function(){<br>  $.get(“demo_test.asp”,function(data,status){<br>    alert(“Data: “ + data + “\nStatus: “ + status);<br>  });<br>});</p>
+<p>$.get() 的第一个参数是我们希望请求的 URL（”demo_test.asp”）。</p>
+<p>第二个参数是回调函数。第一个回调参数存有被请求页面的内容，第二个回调参数存有请求的状态。</p>
+<p>提示：这个 ASP 文件 (“demo_test.asp”) 类似这样：</p>
+<pre><code>&lt;%
+response.write(&quot;This is some text from an external ASP file.&quot;)
+%&gt;
+</code></pre><h2 id="jQuery-post-方法"><a href="#jQuery-post-方法" class="headerlink" title="jQuery $.post() 方法"></a>jQuery $.post() 方法</h2><p>$.post() 方法通过 HTTP POST 请求从服务器上请求数据。</p>
+<h3 id="语法：-1"><a href="#语法：-1" class="headerlink" title="语法："></a>语法：</h3><pre><code>$.post(URL,data,callback);
+</code></pre><p>必需的 URL 参数规定您希望请求的 URL。</p>
+<p>可选的 data 参数规定连同请求发送的数据。</p>
+<p>可选的 callback 参数是请求成功后所执行的函数名。</p>
+<p>下面的例子使用 $.post() 连同请求一起发送数据：</p>
+<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><p>$(“button”).click(function(){<br>  $.post(“demo_test_post.asp”,<br>  {<br>    name:”Donald Duck”,<br>    city:”Duckburg”<br>  },<br>  function(data,status){<br>    alert(“Data: “ + data + “\nStatus: “ + status);<br>  });<br>});<br>$.post() 的第一个参数是我们希望请求的 URL (“demo_test_post.asp”)。</p>
+<p>然后我们连同请求（name 和 city）一起发送数据。</p>
+<p>“demo_test_post.asp” 中的 ASP 脚本读取这些参数，对它们进行处理，然后返回结果。</p>
+<p>第三个参数是回调函数。第一个回调参数存有被请求页面的内容，而第二个参数存有请求的状态。</p>
+<p>提示：这个 ASP 文件 (“demo_test_post.asp”) 类似这样：</p>
+<pre><code>&lt;%
+dim fname,city
+fname=Request.Form(&quot;name&quot;)
+city=Request.Form(&quot;city&quot;)
+Response.Write(&quot;Dear &quot; &amp; fname &amp; &quot;. &quot;)
+Response.Write(&quot;Hope you live well in &quot; &amp; city &amp; &quot;.&quot;)
+%&gt;
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/25/jQuery - AJAX get() 和 post() 方法/" data-id="cjaep0mwq0001pgtf66d233nr" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/11/javascript变量/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/25/jQuery - AJAX get() 和 post() 方法/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/11/javascript变量/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/04/window对象/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/28/boolean/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/14/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
