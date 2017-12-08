@@ -61,10 +61,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-XHR请求" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-jQuery设置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/12/08/XHR请求/" class="article-date">
-  <time datetime="2017-12-08T08:17:15.067Z" itemprop="datePublished">2017-12-08</time>
+    <a href="/2017/12/08/jQuery设置/" class="article-date">
+  <time datetime="2017-12-08T08:26:55.977Z" itemprop="datePublished">2017-12-08</time>
 </a>
     
   </div>
@@ -73,51 +73,61 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="AJAX-向服务器发送请求"><a href="#AJAX-向服务器发送请求" class="headerlink" title="AJAX - 向服务器发送请求"></a>AJAX - 向服务器发送请求</h1><h3 id="XMLHttpRequest对象用于和服务器交换数据"><a href="#XMLHttpRequest对象用于和服务器交换数据" class="headerlink" title="XMLHttpRequest对象用于和服务器交换数据"></a>XMLHttpRequest对象用于和服务器交换数据</h3><h3 id="向服务器发送请求"><a href="#向服务器发送请求" class="headerlink" title="向服务器发送请求"></a>向服务器发送请求</h3><p>如需将请求发送到服务器，我们使用XMLHttpRequest对象的open() 和 send() 方法：<br>    xmlhttp.open(“GET”,”test1.txt”,true);<br>    xmlhttp.send();<br>|方法|描述|<br>|—-|—–|<br>|open(method,url,async)|规定请求的类型、URL 以及是否异步处理请求。</p>
+        <h1 id="jQuery-设置内容和属性"><a href="#jQuery-设置内容和属性" class="headerlink" title="jQuery - 设置内容和属性"></a>jQuery - 设置内容和属性</h1><h3 id="设置内容-text-、html-以及-val"><a href="#设置内容-text-、html-以及-val" class="headerlink" title="设置内容 - text()、html() 以及 val()"></a>设置内容 - text()、html() 以及 val()</h3><p>我们将使用前一章中的三个相同的方法来设置内容：</p>
 <ul>
-<li>method：请求的类型；GET 或 POST</li>
-<li>url：文件在服务器上的位置</li>
-<li>async：true（异步）或 false（同步）|<br>|send(string)|将请求发送到服务器。</li>
-<li>string：仅用于 POST 请求|<h3 id="GET还是POST"><a href="#GET还是POST" class="headerlink" title="GET还是POST"></a>GET还是POST</h3>与POST相比，GET更简单也更快，并且在大部分情况下都能用。<br>然而，在以下情况中，请使用post请求：</li>
-<li>无法使用缓存文件（跟新服务器上的文件或数据库）</li>
-<li>向服务器发送大量数据（post没有数据量限制）</li>
-<li><p>发送包含未知字符的用户输入时，post比get更稳定也更可靠</p>
-<h3 id="GET请求"><a href="#GET请求" class="headerlink" title="GET请求"></a>GET请求</h3><p>一个简单的GET请求：<br>  xmlhttp.open(“GET”,”demo_get.asp”,true);<br>  xmlhttp.send();<br>如果得到的是缓存结果，为避免这种情况，请向URL添加一个唯一的ID：<br> xmlhttp.open(“GET”,”demo_get.asp?t=” + Math.random(),true);<br> xmlhttp.send();<br>如果您希望通过 GET 方法发送信息，请向 URL 添加信息：<br> xmlhttp.open(“GET”,”demo_get2.asp?fname=Bill&amp;lname=Gates”,true);<br> xmlhttp.send();</p>
-<h3 id="POST-请求"><a href="#POST-请求" class="headerlink" title="POST 请求"></a>POST 请求</h3><p>一个简单 POST 请求：</p>
-<p> xmlhttp.open(“POST”,”demo_post.asp”,true);<br> xmlhttp.send();<br>如果需要像 HTML 表单那样 POST 数据，请使用 setRequestHeader() 来添加 HTTP 头。然后在 send() 方法中规定您希望发送的数据：</p>
-<p> xmlhttp.open(“POST”,”ajax_test.asp”,true);<br> xmlhttp.setRequestHeader(“Content-type”,”application/x-www-form-urlencoded”);<br> xmlhttp.send(“fname=Bill&amp;lname=Gates”);<br>|方法|描述|<br>|—-|—–|<br>|setRequestHeader(header,value)|向请求添加 HTTP 头。</p>
-</li>
-<li><p>header: 规定头的名称</p>
-</li>
-<li><p>value: 规定头的值|</p>
-<h3 id="url-服务器上的文件"><a href="#url-服务器上的文件" class="headerlink" title="url - 服务器上的文件"></a>url - 服务器上的文件</h3><p>open() 方法的 url 参数是服务器上文件的地址：</p>
-<p> xmlhttp.open(“GET”,”ajax_test.asp”,true);<br>该文件可以是任何类型的文件，比如 .txt 和 .xml，或者服务器脚本文件，比如 .asp 和 .php （在传回响应之前，能够在服务器上执行任务）。</p>
-<h3 id="异步-True-或-False？"><a href="#异步-True-或-False？" class="headerlink" title="异步 - True 或 False？"></a>异步 - True 或 False？</h3><p>AJAX 指的是异步 JavaScript 和 XML（Asynchronous JavaScript and XML）。</p>
-</li>
+<li>text() - 设置或返回所选元素的文本内容</li>
+<li>html() - 设置或返回所选元素的内容（包括 HTML 标记）</li>
+<li>val() - 设置或返回表单字段的值<br>下面的例子演示如何通过 text()、html() 以及 val() 方法来设置内容：</li>
 </ul>
-<p>XMLHttpRequest 对象如果要用于 AJAX 的话，其 open() 方法的 async 参数必须设置为 true：</p>
-<p>   xmlhttp.open(“GET”,”ajax_test.asp”,true);<br>对于 web 开发人员来说，发送异步请求是一个巨大的进步。很多在服务器执行的任务都相当费时。AJAX 出现之前，这可能会引起应用程序挂起或停止。</p>
-<p>通过 AJAX，JavaScript 无需等待服务器的响应，而是：</p>
-<ul>
-<li>在等待服务器响应时执行其他脚本</li>
-<li><p>当响应就绪后对响应进行处理</p>
-<h3 id="Async-true"><a href="#Async-true" class="headerlink" title="Async = true"></a>Async = true</h3><p>当使用 async=true 时，请规定在响应处于 onreadystatechange 事件中的就绪状态时执行的函数：</p>
-<p>  xmlhttp.onreadystatechange=function()<br>  {<br>  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)</p>
-<pre><code>{
-document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;
-}
-</code></pre><p>  }<br>  xmlhttp.open(“GET”,”test1.txt”,true);<br>  xmlhttp.send();</p>
-<h3 id="Async-false"><a href="#Async-false" class="headerlink" title="Async = false"></a>Async = false</h3><p>如需使用 async=false，请将 open() 方法中的第三个参数改为 false：</p>
-<p> xmlhttp.open(“GET”,”test1.txt”,false);<br>不推荐使用 async=false，但是对于一些小型的请求，也是可以的。</p>
-</li>
-</ul>
-<p>请记住，JavaScript 会等到服务器响应就绪才继续执行。如果服务器繁忙或缓慢，应用程序会挂起或停止。</p>
-<p>注释：当您使用 async=false 时，请不要编写 onreadystatechange 函数 - 把代码放到 send() 语句后面即可：<br>    xmlhttp.open(“GET”,”test1.txt”,false);<br>    xmlhttp.send();<br>    document.getElementById(“myDiv”).innerHTML=xmlhttp.responseText;</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><pre><code>$(&quot;#btn1&quot;).click(function(){
+$(&quot;#test1&quot;).text(&quot;Hello world!&quot;);
+});
+$(&quot;#btn2&quot;).click(function(){
+$(&quot;#test2&quot;).html(&quot;&lt;b&gt;Hello world!&lt;/b&gt;&quot;);
+});
+$(&quot;#btn3&quot;).click(function(){
+$(&quot;#test3&quot;).val(&quot;Dolly Duck&quot;);
+});
+</code></pre><h3 id="text-、html-以及-val-的回调函数"><a href="#text-、html-以及-val-的回调函数" class="headerlink" title="text()、html() 以及 val() 的回调函数"></a>text()、html() 以及 val() 的回调函数</h3><p>上面的三个 jQuery 方法：text()、html() 以及 val()，同样拥有回调函数。回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。</p>
+<p>下面的例子演示带有回调函数的 text() 和 html()：</p>
+<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><pre><code>$(&quot;#btn1&quot;).click(function(){
+$(&quot;#test1&quot;).text(function(i,origText){
+    return &quot;Old text: &quot; + origText + &quot; New text: Hello world!
+    (index: &quot; + i + &quot;)&quot;;
+});
+});
 
+$(&quot;#btn2&quot;).click(function(){
+$(&quot;#test2&quot;).html(function(i,origText){
+    return &quot;Old html: &quot; + origText + &quot; New html: Hello &lt;b&gt;world!&lt;/b&gt;
+    (index: &quot; + i + &quot;)&quot;;
+});
+});
+</code></pre><h3 id="设置属性-attr"><a href="#设置属性-attr" class="headerlink" title="设置属性 - attr()"></a>设置属性 - attr()</h3><p>jQuery attr() 方法也用于设置/改变属性值。</p>
+<p>下面的例子演示如何改变（设置）链接中 href 属性的值：</p>
+<h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h3><pre><code>$(&quot;button&quot;).click(function(){
+$(&quot;#w3s&quot;).attr(&quot;href&quot;,&quot;http://www.w3school.com.cn/jquery&quot;);
+});
+</code></pre><p>attr() 方法也允许您同时设置多个属性。</p>
+<p>下面的例子演示如何同时设置 href 和 title 属性：</p>
+<h3 id="实例-3"><a href="#实例-3" class="headerlink" title="实例"></a>实例</h3><pre><code>$(&quot;button&quot;).click(function(){
+$(&quot;#w3s&quot;).attr({
+    &quot;href&quot; : &quot;http://www.w3school.com.cn/jquery&quot;,
+    &quot;title&quot; : &quot;W3School jQuery Tutorial&quot;
+});
+});
+</code></pre><h3 id="attr-的回调函数"><a href="#attr-的回调函数" class="headerlink" title="attr() 的回调函数"></a>attr() 的回调函数</h3><p>jQuery 方法 attr()，也提供回调函数。回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。</p>
+<p>下面的例子演示带有回调函数的 attr() 方法：</p>
+<h3 id="实例-4"><a href="#实例-4" class="headerlink" title="实例"></a>实例</h3><pre><code>$(&quot;button&quot;).click(function(){
+$(&quot;#w3s&quot;).attr(&quot;href&quot;, function(i,origValue){
+    return origValue + &quot;/jquery&quot;;
+});
+});
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/12/08/XHR请求/" data-id="cjaxn2muu0000m8tfm510c0vr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/12/08/jQuery设置/" data-id="cjaxnesli000380tfocwpjmzx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -180,7 +190,7 @@ Response.Write(&quot;Hope you live well in &quot; &amp; city &amp; &quot;.&quot;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/25/jQuery - AJAX get() 和 post() 方法/" data-id="cjaxn2mve0003m8tfvafivt37" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/25/jQuery - AJAX get() 和 post() 方法/" data-id="cjaxnesli000280tfbzb9rt7j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -224,7 +234,7 @@ z=x+y
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/11/javascript变量/" data-id="cjaxn2mve0004m8tfbsnzwg2g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/11/javascript变量/" data-id="cjaxnesli000480tfn0wgfbt6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -460,7 +470,7 @@ z=x+y
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/04/window对象/" data-id="cjaxn2mve0005m8tfaf1vjcqz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/04/window对象/" data-id="cjaxnesls000580tfeuk6yfne" class="article-share-link">Share</a>
       
       
     </footer>
@@ -551,7 +561,7 @@ Boolean(value);//转换函数
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/28/boolean/" data-id="cjaxn2mv40001m8tfadra58kv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/28/boolean/" data-id="cjaxnesl8000080tfcr049wgm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -596,7 +606,7 @@ Boolean(value);//转换函数
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/14/hello-world/" data-id="cjaxn2mv40002m8tfwy675rbs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/14/hello-world/" data-id="cjaxnesli000180tf7g94aj0p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -636,7 +646,7 @@ Boolean(value);//转换函数
       <ul>
         
           <li>
-            <a href="/2017/12/08/XHR请求/">(no title)</a>
+            <a href="/2017/12/08/jQuery设置/">(no title)</a>
           </li>
         
           <li>
